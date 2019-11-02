@@ -1,0 +1,170 @@
+body {
+    height: 100%;
+    background-image: linear-gradient(to right, #7A88FF, #7AFFAF);
+    margin: 0;
+}
+.headPush {
+	height: 15%;
+}
+/* 标头文字 */
+.centerlog {
+    display: block;
+    margin: auto;
+    height: 4rem;
+}
+/* 搜索框系列 */
+.ui.search{
+    margin-top: 3em;
+}
+.ui.input{
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+.prompt{
+    width: 50em;
+}
+/* 收藏夹系列 */
+.container{
+    text-align: center;
+    display: block;
+    margin: auto;
+    padding: 1em;
+}
+.ui.button{
+	margin-top: 1em;
+}
+.close{
+    position: relative;
+    top:0px;
+    right:-2px;
+	width:5px;
+	height:5px;
+	padding:5px;
+	background:red;
+	border-radius:50%;
+	border:0;
+	cursor:pointer;
+	box-shadow:0 3px 3px rgba(0,0,0,0.1);
+	/* transition:all .1s; */
+}
+.subcontainer{
+    text-align: center;
+    display: block;
+    margin: auto;
+    padding: 1em;
+    padding-top: 0em;
+    padding-bottom: 2em;
+}
+
+/* 快捷访问系列 */
+.ui.two.column.grid.stables{
+    margin: 0 auto;
+    width: 800px;
+}
+.ui.stables{
+	background-color: rgba(49, 49, 49, 0.1);
+	padding: 0.5em;
+}
+/* Pop Up */
+.PopUpBackGround{
+    background-color: rgba(49, 49, 49, 0.5);
+    position: fixed;
+    left: 0%;
+    /* margin: -300/2 0 0 -300/2; */
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+}
+.PopUp{
+    background-color: rgba(255, 255, 255, 1);
+    position: fixed;
+    width: 30%;
+    left: 35%;
+    height: 26%;
+    top: 37%;
+    z-index: 200;
+}
+.PopUpHeader{
+    background-color: black;
+    width: 100%;
+    height: 35px;
+    color: white;
+    line-height: 35px;
+    text-align: center;
+}
+.PopUpSearch{
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+.PopUpInput{
+    outline-style: none ;
+    border: 1px solid #ccc; 
+    border-radius: 3px;
+    padding: 7px 7px;
+    width: 70%;
+    font-size: 14px;
+    font-family: "Microsoft soft";
+}
+.file {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 20px;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 2px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.file:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+    text-decoration: none;
+}
+
+input:focus{
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+
+/* 脚注 */
+footer{
+    height: 30px; /*设定footer高度*/
+    position: absolute; /*设定footer绝对位置在底部*/
+    bottom: 0;
+    width: 100%; /*展开footer宽度*/
+    background-color: rgba(49, 49, 49, 0.74);
+    /* line-height: 10px; */
+}
+.footer.button{
+    z-index:100;
+    position:relative;
+    line-height:15px;
+    margin-top:5px;
+    margin-left:5%;
+    float:left;
+    font-size: small;
+}
+.footer.content{
+    float:right;
+    margin-top: 3px;
+    margin-right: 5%;
+    font-size: small;
+}

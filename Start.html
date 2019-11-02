@@ -1,0 +1,134 @@
+<head>
+        <meta charset="UTF-8">
+        <meta name="description" content="个人导航">
+        <meta name="keywords" content="导航">
+        <meta name="generator" content="Sufer 丨 2019.03.18">
+        <link rel="stylesheet" href="css/semantic.min.css">
+        <link rel="stylesheet" href="css/my_css.css">
+        <link rel="shortcut icon" href="img/home.png">
+        <title>Start</title>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/buildFavorites.js"></script>
+</head>
+<body onload="refresh()">
+    <div class="headPush"></div>
+    <img class="centerlog" src="img/5.png">
+
+    <div class="ui search">
+        <div class="ui input">
+            <!--<input id="search" name="wd" class="prompt" placeholder="" type="text" autofocus="autofocus">-->
+            <input id="search" name="wd" class="prompt" placeholder="" type="text">
+        </div>
+    </div>
+
+    <div class="container">
+        <button class="ui button" id="baidu">
+            百度：Enter
+        </button>
+        <button class="ui button" id="google">
+            谷歌：Ctrl+Enter
+        </button>
+        <button class="ui button" id="fanyi">
+            翻译：Shift+Enter
+        </button>
+        <button class="ui button" onclick="javascript:window.open('https://scholar.google.com/','_self')">
+            谷歌学术
+        </button>
+    </div>
+    <div class="subcontainer" id="userFavorites">
+    </div>
+    <div class="ui two column grid stables">
+        <div class="column ">
+            <table class="ui definition small table ">
+                <!--<td align="center"><a href="http://www.jd.com/" target="_blank">京东</a></td>target="_blank" 新建页面打开-->
+                <tbody>
+                    <tr>
+                        <td align="center">邮箱</td>
+                        <td align="center"><a href="https://mail.163.com/#return">163邮箱</a></td>
+                        <td align="center"><a href="https://mail.sjtu.edu.cn/zimbra/mail#1">交大邮箱</a></td>
+                        <td align="center"><a href="https://mail.qq.com/">QQ邮箱</a></td>
+                        <td align="center"><a href="https://mail.google.com/">谷歌邮箱</a></td>
+                    </tr>
+                <tbody>
+                    <tr>
+                        <td align="center">视频</td>
+                        <td align="center"><a href="http://www.bilibili.com/">BiliBili</a></td>
+                        <td align="center"><a href="https://movie.douban.com/chart">豆瓣</a></td>
+                        <td align="center"><a href="https://www.youtube.com/">YouTobe</a></td>
+                        <td align="center"><a href="https://www.bturl.cc">BT</a></td>
+                    </tr>
+                <tbody>
+                    <tr>
+                        <td align="center">程序</td>
+                        <td align="center"><a href="https://gitee.com/ ">码云</a></td>
+                        <td align="center"><a href="https://leetcode.com/problemset/all/ ">LeetCode</a></td>
+                        <td align="center"><a href="https://acm.sjtu.edu.cn/OnlineJudge/problems">OnlineJudge</a></td>
+                </tbody>
+            </table>
+        </div>
+        <div class=" column">
+            <table class="ui definition small table ">
+                <tbody>
+                    <tr>
+                        <td align="center">校园</td>
+                        <td align="center"><a href="http://i.jwc.sjtu.edu.cn/eduplate/seduservice/index.aspx">成绩查询</a></td>
+                        <td align="center"><a href="http://studyroom.lib.sjtu.edu.cn/reserve_plus.asp">图书馆</a></td>
+                        <td align="center"><a href="http://www.cnmooc.org/home/login.mooc">MOOC</a></td>
+                        <td align="center"><a href="https://tongqu.me/">同去网</a></td>
+                    </tr>
+                <tbody>
+                    <tr>
+                        <td align="center">工具</td>
+                        <td align="center"><a href="http://tongtianta.site/">论文翻译</a></td>
+                        <td align="center"><a href="https://www.processon.com/diagrams">流程图</a></td>
+                        <td align="center"><a href="https://ssrcloud.com/user">SSR</a></td>
+                        <td align="center"><a href="https://greasyfork.org/zh-CN/scripts">油猴脚本</a></td>
+                    </tr>
+                <tbody>
+                    <tr>
+                        <td align="center">社交</td>
+                        <td align="center"><a href="http://tieba.baidu.com/">百度贴吧</a></td>
+                        <td align="center"><a href="http://weibo.com/">微博</a></td>
+                        <td align="center"><a href="https://www.zhihu.com/search?type=content&q= ">知乎</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="PopUpBackGround" id="mask" style="display:none">
+        <div class="PopUp">
+            <div class='PopUpHeader'>
+                <b>创建收藏夹</b>
+            </div>
+            <div class='PopUpSearch'> 
+                <b>名称:</b>&nbsp&nbsp <input id="names" name="wd" class="PopUpInput" placeholder="" type="text">
+            </div>
+            <div class='PopUpSearch'>
+                <b>地址:</b>&nbsp&nbsp <input id="urls" name="wd" class="PopUpInput" placeholder="" type="text">
+            </div>
+            <div>
+                <div class="file" align=left> 载入保存文件
+                    <input type='file' onchange='openFile(event)'>
+                </div>
+                <input type="button" value="复制到剪切板" id="down" onclick="Copy()">
+                <input type="button" value="确定" id="sure" onclick="putObj()">
+                <input type="button" value="取消" id="cancel" onclick="document.getElementById('mask').style.display='none'">
+            </div>
+        </div>
+    </div>
+    <div class="PopUpBackGround" id="deletemask" style="display:none;z-index: 25;"></div>
+</body>
+<script src="js/search.js"></script>
+<footer>
+    <input type="button" value="DELETE" id="DEL" class='footer button'  onclick="switchDelete()">
+    <div class="footer content">
+        <span itemprop="copyrightYear" style="color:#9e9e9e;">
+            © 2019 Sufer_Qin&nbsp&nbsp
+        </span>
+
+        <a href="http://www.github.com/1105042987/" >
+            <img src="img/Sufer.jpg" style="position:relative;top:3px;border:1px;" width="16px" />
+            &nbsp゛祈垠&nbsp&nbsp
+        </a>
+    </div>
+</footer>
