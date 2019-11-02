@@ -1,0 +1,40 @@
+# Insert your preferred key mappings here.
+unmap <c-e>
+unmap <c-y>
+unmap gg
+map U scrollToTop
+unmap d
+map n scrollPageDown
+unmap G
+map N scrollToBottom
+unmap r
+unmap p
+unmap yy
+unmap P
+unmap v
+unmap i
+unmap gi
+map I focusInput # input
+unmap gf
+unmap gF
+unmap b
+unmap B
+unmap F
+map F LinkHints.activateModeToOpenInNewForegroundTab
+unmap /
+unmap o
+unmap O
+map o Vomnibar.activateInNewTab
+map b Vomnibar.activateBookmarksInNewTab
+map B Vomnibar.activateBookmarks
+unmap t
+unmap T
+map t Vomnibar.activateTabSelection
+unmap gt
+unmap gT
+unmap g0
+unmap g$
+unmap yt
+unmap <a-m>
+unmap <a-p>
+map C copyCurrentUrl
