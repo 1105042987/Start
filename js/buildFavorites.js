@@ -101,3 +101,19 @@ function Copy(){
 	}
     document.body.removeChild(input);
 }
+
+function backUp(){
+	var str = '['
+    for (var i=0;i<window.localStorage.length;i++){
+        var name = window.localStorage.key(i);
+        var url = window.localStorage.getItem(name)
+        if (i!=0) str+=',';
+        str += "{\"name\":\""+name+"\",\"url\":\""+url+"\"}"
+    }
+    str+=']'
+	var y="data:text/plain," + str;
+	var dlBn=document.createElement('a');
+	dlBn.href=y;
+    dlBn.download="user.json";
+	dlBn.click();
+}
