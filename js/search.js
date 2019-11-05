@@ -44,7 +44,14 @@ document.onkeydown = function (e) { // 回车提交表单
   var theEvent = window.event || e;
 	var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
 	if (document.getElementById('mask').style.display=='none' && code == 13) {
-		if (window.event.ctrlKey == 1) {
+    if (window.event.altKey == 1) {
+    // if (window.event.ctrlKey == 1&&window.event.shiftKey == 1) {
+      p = "https://scholar.google.com/scholar?hl=zh-CN&as_sdt=0%2C5&q=";
+			n = "&btnG=";
+			s = 'https://scholar.google.com/';
+			doAction(p, n, s);
+    }
+    else if (window.event.ctrlKey == 1) {
 			p = "https://www.google.com/search?q=";
 			n = "&gws_rd=cr&nfpr=1&newwindow=1&num=30";
 			s = 'https://www.google.com/webhp?gws_rd=cr&nfpr=1&newwindow=1&num=30';
