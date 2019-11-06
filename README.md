@@ -28,7 +28,7 @@
     - 输入：启用或关闭Windows功能；打开；
     - 展开Internet Information Service，将＂Web管理工具＂与＂万维网＂前的选框调整为黑色方块或对勾状态；
     - 打开资源管理器访问[C:\inetpub\wwwroot](C:\inetpub\wwwroot)，将本项目代码解压至此；
-    - New Tab Redirect重定向位置：index.html所在的完整路径或其根目录路径；
+    - New Tab Redirect重定向位置：http://127.0.0.1/Start
   - Python方式：
     - 任意位置处解压缩此项目代码；
     - 在index.html所在的根目录处运行指令：python -m http.server
