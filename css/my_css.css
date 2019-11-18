@@ -1,6 +1,7 @@
 body {
     height: 100%;
     background-image: linear-gradient(to right, #7A88FF, #7AFFAF);
+    /* background-image: url('../img/background.png'); */
     margin: 0;
 }
 .headPush {
