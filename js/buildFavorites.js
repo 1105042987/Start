@@ -16,24 +16,61 @@ var openFile = function(event) {
 };
 
 let judgeClick = function(name,url){
-    if (isDelete == 0){
-        window.open(url,'_self')
-    }
-    else{
+    if (isDelete == 1){
         window.localStorage.removeItem(name)
         refresh()
+    }
+    else{
+        if (isEdit == 1){
+            document.getElementById('mask').style.display=''
+            document.getElementById('names').value=name
+            document.getElementById('urls').value=url
+        }
+        else{
+            window.open(url,'_self')
+        }
     }
 }
 
 var isDelete = 0;
+var backUpColor = '';
 let switchDelete=function(){
     if (document.getElementById('deletemask').style.display == 'none'){
         document.getElementById('deletemask').style.display = '';
+        document.getElementById('editmask').style.display = 'none';
         isDelete=1;
+        isEdit=0;
+        backUpColor = document.getElementById('DEL').style.background;
+        document.getElementById('DEL').style.background = '#FFFFFF';
+        document.getElementById('EDIT').style.background = backUpColor;
     }
     else{
         document.getElementById('deletemask').style.display = 'none';
+        document.getElementById('editmask').style.display = 'none';
         isDelete=0;
+        isEdit=0;
+        document.getElementById('DEL').style.background = backUpColor;
+        document.getElementById('EDIT').style.background = backUpColor;
+    }
+}
+var isEdit = 0;
+let switchEdit=function(){
+    if (document.getElementById('editmask').style.display == 'none'){
+        document.getElementById('editmask').style.display = '';
+        document.getElementById('deletemask').style.display = 'none';
+        isEdit=1;
+        isDelete=0;
+        backUpColor = document.getElementById('EDIT').style.background;
+        document.getElementById('EDIT').style.background = '#FFFFFF';
+        document.getElementById('DEL').style.background = backUpColor;
+    }
+    else{
+        document.getElementById('editmask').style.display = 'none';
+        document.getElementById('deletemask').style.display = 'none';
+        isEdit=0;
+        isDelete=0;
+        document.getElementById('DEL').style.background = backUpColor;
+        document.getElementById('EDIT').style.background = backUpColor;
     }
 }
 

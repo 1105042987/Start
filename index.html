@@ -40,7 +40,7 @@
     <div class="ui two column grid stables">
         <div class="column ">
             <table class="ui definition small table ">
-                <!--<td align="center"><a href="http://www.jd.com/" target="_blank">京东</a></td>target="_blank" 新建页面打开-->
+                <!-- <td align="center"><a href="http://www.jd.com/" target="_blank">京东</a></td> //target="_blank" 新建页面打开 -->
                 <tbody>
                     <tr>
                         <td align="center">邮箱</td>
@@ -64,6 +64,7 @@
                         <td align="center"><a href="https://gitee.com/ ">码云</a></td>
                         <td align="center"><a href="https://leetcode.com/problemset/all/ ">LeetCode</a></td>
                         <td align="center"><a href="https://acm.sjtu.edu.cn/OnlineJudge/problems">OnlineJudge</a></td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -72,7 +73,7 @@
                 <tbody>
                     <tr>
                         <td align="center">校园</td>
-                        <td align="center"><a href="http://i.jwc.sjtu.edu.cn/eduplate/seduservice/index.aspx">成绩查询</a></td>
+                        <td align="center"><a href="https://i.sjtu.edu.cn/">SJTU</a></td>
                         <td align="center"><a href="http://studyroom.lib.sjtu.edu.cn/reserve_plus.asp">图书馆</a></td>
                         <td align="center"><a href="http://www.cnmooc.org/home/login.mooc">MOOC</a></td>
                         <td align="center"><a href="https://tongqu.me/">同去网</a></td>
@@ -80,9 +81,9 @@
                 <tbody>
                     <tr>
                         <td align="center">工具</td>
-                        <td align="center"><a href="http://tongtianta.site/">论文翻译</a></td>
+                        <td align="center"><a href="https://github.com/1105042987/copyTranslate">翻译工具</a></td>
                         <td align="center"><a href="https://www.processon.com/diagrams">流程图</a></td>
-                        <td align="center"><a href="https://stephanie6251dsaszd.xyz/#/auth/register?code=eVSQ">SSR</a></td>
+                        <td align="center"><a href="https://www.clashcloud.net/auth/register?code=jGyg">SSR</a></td>
                         <td align="center"><a href="https://greasyfork.org/zh-CN/scripts">油猴脚本</a></td>
                     </tr>
                 <tbody>
@@ -102,27 +103,38 @@
             <div class='PopUpHeader'>
                 <b>创建收藏夹</b>
             </div>
+            <div style="width:90%; margin-left: 5%; margin-top: 3px; border:1px solid #DFDFDF;"></div>
             <div class='PopUpSearch'> 
-                <b>名称:</b>&nbsp&nbsp <input id="names" name="wd" class="PopUpInput" placeholder="" type="text">
+                <input id="names" name="wd" class="PopUpInput" placeholder="名称" type="text" autocomplete="off">
             </div>
             <div class='PopUpSearch'>
-                <b>地址:</b>&nbsp&nbsp <input id="urls" name="wd" class="PopUpInput" placeholder="" type="text">
+                <input id="urls" name="wd" class="PopUpInput" placeholder="地址" type="text" autocomplete="off">
             </div>
-            <div>
-                <div class="file" align=left> Load
-                    <input type='file' onchange='openFile(event)'>
-                </div>
-                <input type="button" value="Save" id="down" onclick="backUp()">
-                <input type="button" value="确定" id="sure" onclick="putObj()">
-                <input type="button" value="取消" id="cancel" onclick="document.getElementById('mask').style.display='none'">
-            </div>
+            <div id="view" align="center" style="margin-right: 10px;"><table><tr>
+                <td><form>
+                    <div class="file"> Load
+                        <input type='file' onchange='openFile(event)'>
+                    </div>
+                </form></td>
+                <td><form>
+                    <input class="file" type="button" value="Save" id="down" onclick="backUp()">
+                </form> </td>
+                <td><form>
+                    <input class="file" type="button" value="添加" id="sure" onclick="putObj()">
+                </form></td>
+                <td><form>
+                    <input class="file" type="button" value="取消" id="cancel" onclick="document.getElementById('mask').style.display='none'">
+                </form></td>
+            </tr></table></div>
         </div>
     </div>
-    <div class="PopUpBackGround" id="deletemask" style="display:none;z-index: 25;"></div>
+    <div class="PopUpBackGround" id="deletemask" style="display:none; z-index:25;"></div>
+    <div class="PopUpBackGround" id="editmask" style="display:none; z-index:25;"></div>
 </body>
 <script src="js/search.js"></script>
 <footer>
-    <input type="button" value="DELETE" id="DEL" class='footer button'  onclick="switchDelete()">
+    <input type="button" value="DELETE" id="DEL" class="footer button"  onclick="switchDelete()">
+    <input type="button" value="EDIT" id="EDIT" class="footer button"  onclick="switchEdit()">
     <div class="footer content">
         <span itemprop="copyrightYear" style="color:#9e9e9e;">
             © 2019 Sufer_Qin&nbsp&nbsp
