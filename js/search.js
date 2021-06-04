@@ -25,6 +25,36 @@ p：搜索网址前段
 n: 搜到网址后段
 h: 搜索首页
 */
+
+let clickAction=function(name){
+  if (name=="scholar") {
+  // if (window.event.ctrlKey == 1&&window.event.shiftKey == 1) {
+    p = "https://scholar.google.com/scholar?hl=zh-CN&as_sdt=0%2C5&q=";
+    n = "&btnG=";
+    s = 'https://scholar.google.com/';
+    doAction(p, n, s);
+  }
+  else if (name=="google") {
+    p = "https://www.google.com/search?q=";
+    n = "&gws_rd=cr&nfpr=1&newwindow=1&num=30";
+    s = 'https://www.google.com/webhp?gws_rd=cr&nfpr=1&newwindow=1&num=30';
+    doAction(p, n, s);
+  }
+  else if (name=="trans") {
+    var reg= /^[A-Za-z]+$/;
+    var lang = 'en'
+    if (reg.test(sInfor.value[0])){lang='zh-CN'}
+    p = 'https://translate.google.cn/#view=home&op=translate&sl=auto&tl='+lang+'&text=';
+    n = '';
+    s = 'https://translate.google.cn/';
+    doAction(p, n, s);
+  }
+  else{
+    p = "https://www.baidu.com/s?wd=";
+    doAction(p, '', p);
+  }
+}
+
 let doAction=function(p,n,s){
     if(isEmpty(sInfor.value)){
 		window.open(s, '_self');

@@ -20,18 +20,18 @@
             <input id="search" name="wd" class="prompt" placeholder="" type="text" autocomplete="off">
         </div>
     </div>
-
+    <script src="js/search.js"></script>
     <div class="container">
-        <button class="ui button" id="baidu">
+        <button class="ui button" id="baidu" onclick="clickAction('baidu')">
             百度：Enter
         </button>
-        <button class="ui button" id="google">
+        <button class="ui button" id="google" onclick="clickAction('google')">
             谷歌：Ctrl+Enter
         </button>
-        <button class="ui button" id="fanyi">
+        <button class="ui button" id="trans" onclick="clickAction('trans')">
             翻译：Shift+Enter
         </button>
-        <button class="ui button" onclick="javascript:window.open('https://scholar.google.com/','_self')">
+        <button class="ui button" id="scholar" onclick="clickAction('scholar')">
             学术：Alt+Enter
         </button>
     </div>
@@ -131,7 +131,7 @@
     <div class="PopUpBackGround" id="deletemask" style="display:none; z-index:25;"></div>
     <div class="PopUpBackGround" id="editmask" style="display:none; z-index:25;"></div>
 </body>
-<script src="js/search.js"></script>
+<!-- <script src="js/search.js"></script> -->
 <footer>
     <input type="button" value="DELETE" id="DEL" class="footer button"  onclick="switchDelete()">
     <input type="button" value="EDIT" id="EDIT" class="footer button"  onclick="switchEdit()">
