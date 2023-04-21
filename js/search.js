@@ -44,9 +44,9 @@ let clickAction=function(name){
     var reg= /^[A-Za-z]+$/;
     var lang = 'en'
     if (reg.test(sInfor.value[0])){lang='zh-CN'}
-    p = 'https://translate.google.cn/#view=home&op=translate&sl=auto&tl='+lang+'&text=';
+    p = 'https://translate.google.com/#view=home&op=translate&sl=auto&tl='+lang+'&text=';
     n = '';
-    s = 'https://translate.google.cn/';
+    s = 'https://translate.google.com/';
     doAction(p, n, s);
   }
   else{
@@ -91,9 +91,9 @@ document.onkeydown = function (e) { // 回车提交表单
       var reg= /^[A-Za-z]+$/;
       var lang = 'en'
       if (reg.test(sInfor.value[0])){lang='zh-CN'}
-      p = 'https://translate.google.cn/#view=home&op=translate&sl=auto&tl='+lang+'&text=';
+      p = 'https://translate.google.com/#view=home&op=translate&sl=auto&tl='+lang+'&text=';
 			n = '';
-			s = 'https://translate.google.cn/';
+			s = 'https://translate.google.com/';
 			doAction(p, n, s);
 		}
 		else{
