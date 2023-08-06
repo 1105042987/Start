@@ -63,8 +63,7 @@ let switchEdit=function(){
         backUpColor = document.getElementById('EDIT').style.background;
         document.getElementById('EDIT').style.background = '#FFFFFF';
         document.getElementById('DEL').style.background = backUpColor;
-    }
-    else{
+    } else {
         document.getElementById('editmask').style.display = 'none';
         document.getElementById('deletemask').style.display = 'none';
         isEdit=0;
@@ -111,7 +110,12 @@ let refresh = function(){
     fa.innerHTML=''
     for (var i=0;i<window.localStorage.length;i++){
         name = window.localStorage.key(i);
-        createChild(fa,name,localStorage.getItem(name))
+        if (name == '__last_search__'){
+            document.getElementById("search").placeholder=localStorage.getItem(name)
+        }
+        else{
+            createChild(fa,name,localStorage.getItem(name))
+        }
     }
     createAppend(fa)
 }
