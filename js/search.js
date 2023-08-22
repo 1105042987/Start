@@ -50,8 +50,12 @@ let clickAction = function (name) {
         doAction(p, n, s);
     }
     else {
-        p = "https://www.baidu.com/s?wd=";
-        doAction(p, '', p);
+        // p = "https://www.baidu.com/s?wd=";
+        // doAction(p, '', p);
+        p = "https://www.bing.com/search?q=";
+        n = "&sp=-1&lq=0&sc=10-5&qs=n&sk=0&ghsh=0&ghacc=0&ghpl=";
+        s = "https://www.bing.com/";
+        doAction(p, n, s);
     }
 }
 
@@ -102,8 +106,12 @@ document.onkeydown = function (e) { // 回车提交表单
             doAction(p, n, s);
         }
         else {
-            p = "https://www.baidu.com/s?wd=";
-            doAction(p, '', p);
+            // p = "https://www.baidu.com/s?wd=";
+            // doAction(p, '', p);
+            p = "https://www.bing.com/search?q=";
+            n = "&sp=-1&lq=0&sc=10-5&qs=n&sk=0&ghsh=0&ghacc=0&ghpl=";
+            s = "https://www.bing.com/";
+            doAction(p, n, s);
         }
     }
 }
